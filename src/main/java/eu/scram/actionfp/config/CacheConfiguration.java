@@ -84,6 +84,18 @@ public class CacheConfiguration {
             createCache(cm, eu.scram.actionfp.domain.User.class.getName(), jcacheConfiguration);
             createCache(cm, eu.scram.actionfp.domain.Authority.class.getName(), jcacheConfiguration);
             createCache(cm, eu.scram.actionfp.domain.User.class.getName() + ".authorities", jcacheConfiguration);
+            createCache(cm, eu.scram.actionfp.domain.Unit.class.getName(), jcacheConfiguration);
+            createCache(cm, eu.scram.actionfp.domain.Framework.class.getName(), jcacheConfiguration);
+            createCache(cm, eu.scram.actionfp.domain.ActionComment.class.getName(), jcacheConfiguration);
+            createCache(cm, eu.scram.actionfp.domain.Status.class.getName(), jcacheConfiguration);
+            createCache(cm, eu.scram.actionfp.domain.ActionAttachment.class.getName(), jcacheConfiguration);
+            createCache(cm, eu.scram.actionfp.domain.AuditReport.class.getName(), jcacheConfiguration);
+            createCache(cm, eu.scram.actionfp.domain.AuditRecomm.class.getName(), jcacheConfiguration);
+            createCache(cm, eu.scram.actionfp.domain.ICSRecomm.class.getName(), jcacheConfiguration);
+            createCache(cm, eu.scram.actionfp.domain.AuditSubRecomm.class.getName(), jcacheConfiguration);
+            createCache(cm, eu.scram.actionfp.domain.Action.class.getName(), jcacheConfiguration);
+            createCache(cm, eu.scram.actionfp.domain.Action.class.getName() + ".frameworks", jcacheConfiguration);
+            createCache(cm, eu.scram.actionfp.domain.ActionChangeMail.class.getName(), jcacheConfiguration);
             // jhipster-needle-redis-add-entry
         };
     }

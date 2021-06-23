@@ -40,6 +40,20 @@
     "packageFolder": "eu/scram/actionfp",
     "clientPackageManager": "npm",
     "clientThemeVariant": "",
-    "languages": ["en", "fr"]
+    "languages": ["en", "fr"],
+    "entities": [
+      "Unit",
+      "Framework",
+      "ActionComment",
+      "Status",
+      "ActionAttachment",
+      "AuditReport",
+      "AuditRecomm",
+      "ICSRecomm",
+      "AuditSubRecomm",
+      "Action",
+      "ActionChangeMail"
+    ],
+    "lastLiquibaseTimestamp": 1624479726000
   }
 }

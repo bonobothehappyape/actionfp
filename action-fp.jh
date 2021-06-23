@@ -1,0 +1,181 @@
+
+
+
+
+entity Authority {
+
+     name String
+
+}
+
+
+
+entity Unit {
+
+    id Long
+
+	unit String
+}
+
+
+entity Framework{
+
+	id Long
+
+	year Integer
+
+	name String
+
+	type Integer
+
+	description String
+
+}
+
+entity ActionComment {
+
+	id Long
+
+	 comment String
+
+}
+
+
+entity Status{
+	id Long
+    name String
+}
+
+entity ActionAttachment{
+	id Long
+	name String
+	mimeType String
+	attachedFile  Blob
+	url String
+}
+
+
+
+entity AuditReport {
+    id Long
+	year Integer
+
+	reportTitle String
+
+	institution Long
+
+	reportDescription String
+
+}
+
+
+
+entity AuditRecomm {
+    id Long
+	recommNumber String
+	priority Long
+	description String
+
+
+
+}
+
+entity ICSRecomm  {
+
+    id Long
+
+	year Integer
+
+	icsNumber String
+
+	icsDescr String
+
+	title String
+
+}
+
+
+entity AuditSubRecomm {
+    id Long
+	subRecommNum String
+    description String
+}
+
+
+entity Action {
+    id Long
+	taskName String
+	taskDescription String
+	requiresPeriodicFollowup Boolean
+	initialDeadline LocalDate
+  	updatedDeadline LocalDate
+	doneDate LocalDate
+	verifiedDate LocalDate
+
+}
+
+
+
+entity ActionChangeMail {
+
+	id Long
+
+	actionType String
+
+}
+
+relationship ManyToMany {
+  User{authorities(name) required} to Authority{id required}
+}
+
+relationship ManyToOne {
+	AuditRecomm{report} to AuditReport
+	AuditRecomm{status} to Status
+}
+relationship ManyToOne {
+	AuditSubRecomm{status} to Status
+    AuditSubRecomm{auditRecomm} to AuditRecomm
+}
+
+
+relationship ManyToOne {
+	ActionAttachment{action} to Action
+}
+relationship ManyToOne {
+	ActionChangeMail{action} to Action
+    ActionChangeMail{user} to User
+}
+relationship ManyToOne {
+	ActionComment{action} to Action
+}
+relationship ManyToOne {
+
+    Action{icsRecomm} to ICSRecomm
+    Action{ownerUnit} to Unit
+    Action{status} to Status
+}
+
+
+relationship OneToOne {
+	Framework{unit} to Unit
+}
+
+// defining multiple OneToMany relationships with comments
+relationship OneToMany {
+	Action to Framework{action}
+	//Action to User{associatedUsers}
+    //Action to User{associatedUsers}
+    //Action to User{implementationUsers}
+
+}
+
+// Set pagination options
+//paginate Action with pagination
+
+// Use Data Transfer Objects (DTO)
+//dto * with mapstruct
+
+// Set service options to all except few
+//service all with serviceImpl
+
+

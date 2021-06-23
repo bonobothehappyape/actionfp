@@ -15,7 +15,25 @@
     <property name="datetimeType" value="datetime" dbms="oracle, mssql, postgresql, h2"/>
 
     <include file="config/liquibase/changelog/00000000000000_initial_schema.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210623202156_added_entity_Unit.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210623202157_added_entity_Framework.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210623202158_added_entity_ActionComment.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210623202159_added_entity_Status.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210623202200_added_entity_ActionAttachment.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210623202201_added_entity_AuditReport.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210623202202_added_entity_AuditRecomm.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210623202203_added_entity_ICSRecomm.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210623202204_added_entity_AuditSubRecomm.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210623202205_added_entity_Action.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210623202206_added_entity_ActionChangeMail.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-changelog - JHipster will add liquibase changelogs here -->
+    <include file="config/liquibase/changelog/20210623202157_added_entity_constraints_Framework.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210623202158_added_entity_constraints_ActionComment.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210623202200_added_entity_constraints_ActionAttachment.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210623202202_added_entity_constraints_AuditRecomm.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210623202204_added_entity_constraints_AuditSubRecomm.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210623202205_added_entity_constraints_Action.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210623202206_added_entity_constraints_ActionChangeMail.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-constraints-changelog - JHipster will add liquibase constraints changelogs here -->
     <!-- jhipster-needle-liquibase-add-incremental-changelog - JHipster will add incremental liquibase changelogs here -->
 </databaseChangeLog>
