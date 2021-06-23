@@ -1,0 +1,73 @@
+{
+  "name": "Action",
+  "fields": [
+    {
+      "fieldName": "id",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "taskName",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "taskDescription",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "requiresPeriodicFollowup",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "initialDeadline",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "updatedDeadline",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "doneDate",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "verifiedDate",
+      "fieldType": "LocalDate"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "framework",
+      "otherEntityRelationshipName": "action",
+      "relationshipName": "framework"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "iCSRecomm",
+      "otherEntityRelationshipName": "action",
+      "relationshipName": "icsRecomm"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "unit",
+      "otherEntityRelationshipName": "action",
+      "relationshipName": "ownerUnit"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "status",
+      "otherEntityRelationshipName": "action",
+      "relationshipName": "status"
+    }
+  ],
+  "entityTableName": "action",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": "*",
+  "changelogDate": "20210623202205"
+}

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.3.xsd">
+    <!--
+        Added the constraints for entity AuditSubRecomm.
+    -->
+    <changeSet id="20210623202204-2" author="jhipster">
+
+        <addForeignKeyConstraint baseColumnNames="status_id"
+                                 baseTableName="audit_sub_recomm"
+                                 constraintName="fk_audit_sub_recomm__status_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="status"/>
+
+        <addForeignKeyConstraint baseColumnNames="audit_recomm_id"
+                                 baseTableName="audit_sub_recomm"
+                                 constraintName="fk_audit_sub_recomm__audit_recomm_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="audit_recomm"/>
+    </changeSet>
+</databaseChangeLog>

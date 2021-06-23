@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.3.xsd">
+    <!--
+        Added the constraints for entity Action.
+    -->
+    <changeSet id="20210623202205-2" author="jhipster">
+
+        <addForeignKeyConstraint baseColumnNames="ics_recomm_id"
+                                 baseTableName="action"
+                                 constraintName="fk_action__ics_recomm_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="ics_recomm"/>
+
+        <addForeignKeyConstraint baseColumnNames="owner_unit_id"
+                                 baseTableName="action"
+                                 constraintName="fk_action__owner_unit_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="unit"/>
+
+        <addForeignKeyConstraint baseColumnNames="status_id"
+                                 baseTableName="action"
+                                 constraintName="fk_action__status_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="status"/>
+    </changeSet>
+</databaseChangeLog>

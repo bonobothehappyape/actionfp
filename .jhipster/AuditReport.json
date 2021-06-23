@@ -1,0 +1,36 @@
+{
+  "name": "AuditReport",
+  "fields": [
+    {
+      "fieldName": "id",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "year",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "reportTitle",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "institution",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "reportDescription",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [],
+  "entityTableName": "audit_report",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": "*",
+  "changelogDate": "20210623202201"
+}
